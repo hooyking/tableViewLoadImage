@@ -7,7 +7,6 @@ target 'tableViewLoadImage' do
 
   # Pods for tableViewLoadImage
   pod 'SDWebImage'
-  pod 'JPFPSStatus'
 
   target 'tableViewLoadImageTests' do
     inherit! :search_paths

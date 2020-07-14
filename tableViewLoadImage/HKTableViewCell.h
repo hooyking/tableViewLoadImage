@@ -10,10 +10,16 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
+@class PersonModel;
+
 @interface HKTableViewCell : UITableViewCell
 
 @property (weak, nonatomic) IBOutlet UIImageView *imageVi;
 @property (weak, nonatomic) IBOutlet UILabel *titleLabel;
+@property (nonatomic, strong) UITableView *tableView;
+@property (nonatomic, strong) NSIndexPath *indexPath;
+@property (nonatomic, strong) UIImage *placeholderImage;
+@property (nonatomic, strong) PersonModel *model;
 
 @end
 

@@ -8,8 +8,7 @@
 
 #import "AppDelegate.h"
 #import "HKTableViewController.h"
-#import "JPFPSStatus.h"
-#import <UIImageView+WebCache.h>
+#import <SDWebImage.h>
 
 @interface AppDelegate ()
 
@@ -22,13 +21,13 @@
     // Override point for customization after application launch.
     self.window.frame = [UIScreen mainScreen].bounds;
     self.window.backgroundColor = [UIColor whiteColor];
-    
     self.window.rootViewController = [[UINavigationController alloc] initWithRootViewController:[[HKTableViewController alloc] init]];
     [self.window makeKeyAndVisible];
     
-    #if defined(DEBUG)||defined(_DEBUG)
-        [[JPFPSStatus sharedInstance] open];
-    #endif
+    //下面两行代码主要是防止加载大分辨率图片时内存暴涨crash
+    [SDImageCache sharedImageCache].config.shouldCacheImagesInMemory = NO;//缓存图片不放入内存
+    //sd中可点击diskCacheReadingOptions跳转到这个属性，提示设置为NSDataReadingMappedIfSafe可提高性能
+    [SDImageCache sharedImageCache].config.diskCacheReadingOptions = NSDataReadingMappedIfSafe;
     
     return YES;
 }
@@ -62,7 +61,7 @@
 
 - (void)applicationDidReceiveMemoryWarning:(UIApplication *)application {
     [[SDWebImageManager sharedManager] cancelAll];
-    [[SDWebImageManager sharedManager].imageCache clearDiskOnCompletion:nil];
+    [[SDWebImageManager sharedManager].imageCache clearWithCacheType:SDImageCacheTypeDisk completion:nil];
 }
 
 @end

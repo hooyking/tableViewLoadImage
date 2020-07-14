@@ -1,17 +1,18 @@
 PODS:
-  - JPFPSStatus (0.1.1)
-  - SDWebImage (4.4.5):
-    - SDWebImage/Core (= 4.4.5)
-  - SDWebImage/Core (4.4.5)
+  - SDWebImage (5.8.0):
+    - SDWebImage/Core (= 5.8.0)
+  - SDWebImage/Core (5.8.0)
 
 DEPENDENCIES:
-  - JPFPSStatus
   - SDWebImage
 
+SPEC REPOS:
+  trunk:
+    - SDWebImage
+
 SPEC CHECKSUMS:
-  JPFPSStatus: 03f32aa3d4d7d0c5bf56f6f3e7cf8b7280a5f52c
-  SDWebImage: ecc03494e973b93b80213649d32175f8d2d17d4d
+  SDWebImage: 84000f962cbfa70c07f19d2234cbfcf5d779b5dc
 
-PODFILE CHECKSUM: c61fdbbb3357d366a1a6474165de28d9a2732615
+PODFILE CHECKSUM: 5c10bc689ebc6b261c05849352f073dbfef56e23
 
-COCOAPODS: 1.4.0
+COCOAPODS: 1.9.3

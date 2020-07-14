@@ -7,7 +7,7 @@
 //
 
 #import "HKTableViewCell.h"
-#import <UIView+WebCache.h>
+#import "PersonModel.h"
 
 @implementation HKTableViewCell
 
@@ -18,14 +18,35 @@
 
 - (void)prepareForReuse {
     [super prepareForReuse];
-    self.imageVi.image = [UIImage imageNamed:@"placeholder"];//这样用是为了重用单元格时，避免出现的刹那图片的错乱，你可以注释之后试试效果
-    [self.imageVi sd_cancelCurrentImageLoad];//取消当前下载
+    self.imageVi.image = self.placeholderImage;//占位图需要，不然网络很差时可看到显示错乱
+    [self.imageVi sd_cancelCurrentImageLoad];//此方法作用是取消imageView以前关联的url的下载
 }
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {
     [super setSelected:selected animated:animated];
 
     // Configure the view for the selected state
+}
+
+- (void)setModel:(PersonModel *)model {
+    _model = model;
+    if (self.tableView && self.indexPath) {
+        self.titleLabel.text = model.name;
+        UIImage *cacheImage = [[SDImageCache sharedImageCache] imageFromCacheForKey:model.picture];
+        if (cacheImage) {
+            self.imageVi.image = cacheImage;
+            NSLog(@"图片尺寸%@",NSStringFromCGSize(cacheImage.size));
+        } else {
+            NSArray *cells = [self.tableView indexPathsForVisibleRows];
+            if ([cells containsObject:self.indexPath]) {
+                [self.imageVi sd_setImageWithURL:[NSURL URLWithString:model.picture] placeholderImage:self.placeholderImage completed:^(UIImage * _Nullable image, NSError * _Nullable error, SDImageCacheType cacheType, NSURL * _Nullable imageURL) {
+                    image = [image drawImageWithSize:CGSizeMake(kSCREEN_WIDTH, 600)];
+                    self.imageVi.image = image;
+                    [[SDImageCache sharedImageCache] storeImage:image forKey:model.picture completion:nil];
+                }];
+            }
+        }
+    }
 }
 
 @end

@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		0AF4289256CA4E160EFCAE21 /* libPods-tableViewLoadImageTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4F73AF93B5FF02D38DA3B91F /* libPods-tableViewLoadImageTests.a */; };
+		311B362324B8BF5C003E9FD0 /* UIImage+HKKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 311B362224B8BF5C003E9FD0 /* UIImage+HKKit.m */; };
+		31D0529324BC2F0500FA1B02 /* PersonModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 31D0529224BC2F0500FA1B02 /* PersonModel.m */; };
 		31D807F922E9D7EF0031DFAE /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 31D807F822E9D7EF0031DFAE /* AppDelegate.m */; };
 		31D807FF22E9D7EF0031DFAE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 31D807FD22E9D7EF0031DFAE /* Main.storyboard */; };
 		31D8080122E9D7F10031DFAE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 31D8080022E9D7F10031DFAE /* Assets.xcassets */; };
@@ -41,6 +43,12 @@
 
 /* Begin PBXFileReference section */
 		06CF4DE5C27AFC2ABF3BF38D /* libPods-tableViewLoadImageUITests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-tableViewLoadImageUITests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		311B362124B8BF5C003E9FD0 /* UIImage+HKKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIImage+HKKit.h"; sourceTree = "<group>"; };
+		311B362224B8BF5C003E9FD0 /* UIImage+HKKit.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIImage+HKKit.m"; sourceTree = "<group>"; };
+		31D0529024BBF9F400FA1B02 /* Macro.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Macro.h; sourceTree = "<group>"; };
+		31D0529124BC2F0500FA1B02 /* PersonModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PersonModel.h; sourceTree = "<group>"; };
+		31D0529224BC2F0500FA1B02 /* PersonModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PersonModel.m; sourceTree = "<group>"; };
+		31D0529424BC2F5600FA1B02 /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
 		31D807F422E9D7EF0031DFAE /* tableViewLoadImage.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = tableViewLoadImage.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		31D807F722E9D7EF0031DFAE /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		31D807F822E9D7EF0031DFAE /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -127,6 +135,10 @@
 				31D807F822E9D7EF0031DFAE /* AppDelegate.m */,
 				31D8082922E9D81B0031DFAE /* HKTableViewController.h */,
 				31D8082A22E9D81B0031DFAE /* HKTableViewController.m */,
+				311B362124B8BF5C003E9FD0 /* UIImage+HKKit.h */,
+				311B362224B8BF5C003E9FD0 /* UIImage+HKKit.m */,
+				31D0529124BC2F0500FA1B02 /* PersonModel.h */,
+				31D0529224BC2F0500FA1B02 /* PersonModel.m */,
 				31DE509422E9F5CD009E5B5B /* HKTableViewCell.h */,
 				31DE509522E9F5CD009E5B5B /* HKTableViewCell.m */,
 				31DE509622E9F5CD009E5B5B /* HKTableViewCell.xib */,
@@ -134,6 +146,8 @@
 				31D8080022E9D7F10031DFAE /* Assets.xcassets */,
 				31D8080222E9D7F10031DFAE /* LaunchScreen.storyboard */,
 				31D8080522E9D7F10031DFAE /* Info.plist */,
+				31D0529024BBF9F400FA1B02 /* Macro.h */,
+				31D0529424BC2F5600FA1B02 /* PrefixHeader.pch */,
 				31D8080622E9D7F10031DFAE /* main.m */,
 			);
 			path = tableViewLoadImage;
@@ -191,8 +205,6 @@
 				31D807F022E9D7EF0031DFAE /* Sources */,
 				31D807F122E9D7EF0031DFAE /* Frameworks */,
 				31D807F222E9D7EF0031DFAE /* Resources */,
-				8BDC5F195E6A6902AF8576E9 /* [CP] Embed Pods Frameworks */,
-				437642AB741BF44457096D49 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -211,8 +223,6 @@
 				31D8080822E9D7F10031DFAE /* Sources */,
 				31D8080922E9D7F10031DFAE /* Frameworks */,
 				31D8080A22E9D7F10031DFAE /* Resources */,
-				F00AE6861390EC451B9AEA5D /* [CP] Embed Pods Frameworks */,
-				6B09D7AD20D20C6578A6DF68 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -232,8 +242,6 @@
 				31D8081322E9D7F10031DFAE /* Sources */,
 				31D8081422E9D7F10031DFAE /* Frameworks */,
 				31D8081522E9D7F10031DFAE /* Resources */,
-				52A464032610065992E5B759 /* [CP] Embed Pods Frameworks */,
-				BDA2759850EB5AFE3DDF9C2E /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -316,36 +324,6 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		437642AB741BF44457096D49 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-tableViewLoadImage/Pods-tableViewLoadImage-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		52A464032610065992E5B759 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-tableViewLoadImageUITests/Pods-tableViewLoadImageUITests-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		53557EA0E2D66A4DF38FE9E1 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -362,36 +340,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		6B09D7AD20D20C6578A6DF68 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-tableViewLoadImageTests/Pods-tableViewLoadImageTests-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		8BDC5F195E6A6902AF8576E9 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-tableViewLoadImage/Pods-tableViewLoadImage-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		AF8958934B30C225A04A3D04 /* [CP] Check Pods Manifest.lock */ = {
@@ -430,36 +378,6 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		BDA2759850EB5AFE3DDF9C2E /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-tableViewLoadImageUITests/Pods-tableViewLoadImageUITests-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		F00AE6861390EC451B9AEA5D /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-tableViewLoadImageTests/Pods-tableViewLoadImageTests-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -467,6 +385,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				31D0529324BC2F0500FA1B02 /* PersonModel.m in Sources */,
+				311B362324B8BF5C003E9FD0 /* UIImage+HKKit.m in Sources */,
 				31D8082B22E9D81B0031DFAE /* HKTableViewController.m in Sources */,
 				31D8080722E9D7F10031DFAE /* main.m in Sources */,
 				31DE509722E9F5CD009E5B5B /* HKTableViewCell.m in Sources */,
@@ -644,6 +564,9 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 7KW57V5D9K;
+				GCC_INCREASE_PRECOMPILED_HEADER_SHARING = NO;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/tableViewLoadImage/PrefixHeader.pch";
 				INFOPLIST_FILE = tableViewLoadImage/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -663,6 +586,9 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 7KW57V5D9K;
+				GCC_INCREASE_PRECOMPILED_HEADER_SHARING = NO;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/tableViewLoadImage/PrefixHeader.pch";
 				INFOPLIST_FILE = tableViewLoadImage/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
